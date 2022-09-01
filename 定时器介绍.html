@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // 1.定时器：
+            // 闹钟 特点：定时器可以实现让程序在规定的时间内自动执行
+
+            // 2.定时器应用场景：a)网页中的倒记时功能 b)网页中轮播图自动播放
+
+            // 3.定时器使用：
+            // setInterval(function () {},时间间隔)
+            // 1.定时器中第一参数是一个匿名函数 
+            // 2.第二个参数时间间隔，值是自定义的，单位是毫秒
+            
+               let timeId =  setInterval(function () {
+                    console.log('test');
+                },1000)//1.定时器中第一参数是一个匿名函数 2.第二个参数时间间隔，值是自定义的，单位是毫秒(1/1000)
+            // 5.清除定时器（停止定时器）
+            //  语法： clearInterval(定时器ID); 
+            //  注意： a)要停止定时器的时候，需要得到定时器的id
+            // 定时器的id通过setIntervall的返回值得到，setIntervall的返回值就是当前定时器的id
+clearInterval(timeId)
+    </script>
+</body>
+</html>
