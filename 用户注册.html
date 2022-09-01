@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" class="btn" disabled value="我已经阅读用户协议(5)">
+
+    <script>
+        // 1.功能1：按钮标签中的文字内容数字递减 
+        let i = 5;
+        let btn = document.querySelector('.btn');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+        setInterval(function () {
+            i--;
+            // 将数字减1后的值重新赋值给按钮
+            btn.value = (`我已经阅读用户协议(${i})`);
+            //停止定时器
+        },1000);//1.定时器中第一参数是一个匿名函数 2.第二个参数时间间隔，值是自定义的，单位是毫秒(1/1000)
+
+
+        
+        // 2.功能2：当前按钮标签中的数字为0的时候！修改按钮标签身上的文字内容
+        // 3.功能3：当前按钮标签中的数字为0的时候，将按钮设置为可以点击的状态
+    </script>
+</body>
+</html>
