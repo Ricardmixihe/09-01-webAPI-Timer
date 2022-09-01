@@ -130,15 +130,19 @@
     // 2.需要一个变量保存数组中的索引（初始化一个变量默认值为0）
     // 3.将数组的索引隔一段时间修政一下，然后得到不同的值，将值显示到对应的标签中即可
     let i = 0;
+    let img =  document.querySelector('.slider-wrapper img');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+    let p = document.querySelector('.slider-footer p');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
     setInterval(function () {
       i++;
-      if (i > sliderData.length-1) {
+      if (i > sliderData.length - 1) {
         i = 0;
-        
       }
       // 根据当前索引从数组中取值
-      let obj = sliderData[i]
-      console.log(obj);
+      let obj = sliderData[i];
+      img.src = obj.url;
+      p.innerHTML = obj.title;
+      document.querySelector(`li:nth-child(${i+1})`).classList.add(`active`);//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+
     },1000);//1.定时器中第一参数是一个匿名函数 2.第二个参数时间间隔，值是自定义的，单位是毫秒(1/1000)
   </script>
 </body>
