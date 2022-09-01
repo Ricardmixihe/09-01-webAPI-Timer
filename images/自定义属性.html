@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div></div>
     <script>
         //1.什么是自定义属性？
             // a)程序员自己给标签设置的一个属性 自定义属性 (通俗) 
@@ -14,7 +15,17 @@
             // c)标准属性（系统内置属性）：class,id, name
         //2:自定义属性有什么用？
             // a)自定义属性的作用就是用来保存数据的，将数据保存到了标签身上
+            // b)自定义属性都是用来保存和其他标签有关系的一些数据
         //3.自定义属性怎么用？
+            // a)如何给标签设置自定义属性
+                    // 1)直接在标签身上添加自定义属性和值
+                    // 2)通过程序的方式给标签设置自定义属性
+                    // 语法：DOM标签对象.datiaset.自定义属性名 = 值;
+
+            let div = document.querySelector('div');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
+                div.dataset.myname = '老段'
+            // b)如何获取自定义属性中的值
+            console.log(div.dataset.myname);
     </script>
 </body>
 </html>
