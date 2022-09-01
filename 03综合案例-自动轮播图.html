@@ -141,6 +141,8 @@
       let obj = sliderData[i];
       img.src = obj.url;
       p.innerHTML = obj.title;
+      // 移除li标签的样式
+      document.querySelector('.active').classList.remove('active');//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
       document.querySelector(`li:nth-child(${i+1})`).classList.add(`active`);//返回文档中匹配指定 CSS选择器的一个元素。!!注意仅仅返回匹配指定选择器的第一个元素
 
     },1000);//1.定时器中第一参数是一个匿名函数 2.第二个参数时间间隔，值是自定义的，单位是毫秒(1/1000)
